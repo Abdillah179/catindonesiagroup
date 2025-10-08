@@ -1,0 +1,51 @@
+#sidebar {
+background-color: #1F1E2E;
+}
+
+#mainContent {
+    background-color: #151521;
+    height: auto;
+}
+
+.footer {
+    background-color: #151521;
+    color: white;
+}
+
+.judul-h2 {
+    color: white;
+}
+
+#sidebarToggle {
+    color: white;
+}
+
+.tabel-head {
+
+    background-color: white;
+}
+
+.tabel-body > tr > td {
+    color: white;
+}
+
+body, .main-content {
+    background-color: #151521; /* Warna latar belakang untuk dark mode */
+ /* Warna teks untuk dark mode */
+}
+
+label {
+
+    color: white;
+}
+
+/* .text-small {
+    color: aqua;
+    font-weight: 900;
+} */
+
+.sidebar-toogle {
+    color: white;
+}
+
+/* Gaya lainnya untuk elemen yang mungkin terlewat */

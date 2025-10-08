@@ -1,0 +1,10 @@
+body {
+    background-color: rgb(252, 88, 0);
+}
+
+.text-portal {
+    font-family: Inter;
+    font-size: 30px;
+    margin-top: 130px;
+    color: white;
+}
