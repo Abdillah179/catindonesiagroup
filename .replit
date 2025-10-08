@@ -1,0 +1,15 @@
+run = "php artisan serve --host=0.0.0.0 --port=8000"
+entrypoint = "public/index.php"
+
+[nix]
+channel = "stable-22_11"
+
+[deployment]
+run = ["sh", "-c", "php artisan serve --host=0.0.0.0 --port=8000"]
+deploymentTarget = "cloudrun"
+
+[languages.php]
+pattern = "**/*.php"
+
+[languages.php.languageServer]
+start = "intelephense --stdio"
