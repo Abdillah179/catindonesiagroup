@@ -28,9 +28,6 @@ class AppServiceProvider extends ServiceProvider
     {
 
         // Force HTTPS in production
-        if ($this->app->environment('production')) {
-            URL::forceScheme('https');
-        }
 
         Gate::define('ppicplant1gate', function (User $user) {
             return $user->role === 2 && $user->departemen === 'PPIC' && $user->plant === 'Plant 1';
