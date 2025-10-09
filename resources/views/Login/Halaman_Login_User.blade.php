@@ -302,7 +302,7 @@
                 <!-- Preloader Section -->
                 <div id="preloader">
                     <div class="preloader-animation">
-                        <img src="{{ asset('storage/image/logo_cat_terbaru.png') }}" alt="Preloader Image">
+                        <img src="{{ asset('image/logo_cat_terbaru.png') }}" alt="Preloader Image">
                     </div>
                 </div>
                 <!-- NAME -->
