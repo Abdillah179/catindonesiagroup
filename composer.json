@@ -8,6 +8,7 @@
         "php": "^8.2",
         "anhskohbo/no-captcha": "^3.6",
         "barryvdh/laravel-dompdf": "^3.0",
+        "cloudinary-labs/cloudinary-laravel": "^3.0",
         "ezyang/htmlpurifier": "^4.17",
         "firebase/php-jwt": "^6.10",
         "intervention/image": "^3.8",
@@ -17,8 +18,7 @@
         "laravel/tinker": "^2.9",
         "mpdf/mpdf": "^8.2",
         "oldravian/multi-source-file-uploader": "^1.0",
-        "phpoffice/phpspreadsheet": "^3.3",
-        "cloudinary-labs/cloudinary-laravel": "^2.0"
+        "phpoffice/phpspreadsheet": "^3.3"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
