@@ -17,7 +17,8 @@
         "laravel/tinker": "^2.9",
         "mpdf/mpdf": "^8.2",
         "oldravian/multi-source-file-uploader": "^1.0",
-        "phpoffice/phpspreadsheet": "^3.3"
+        "phpoffice/phpspreadsheet": "^3.3",
+        "cloudinary-labs/cloudinary-laravel": "^2.0"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
