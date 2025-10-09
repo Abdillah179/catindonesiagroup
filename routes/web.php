@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Password;
 use Illuminate\Support\Str;
 use \App\Models\User;
 
-Route::middleware(['guests', 'encryp'])->group(function () {
+Route::middleware(['guests'])->group(function () {
     Route::get('/', [ControllerHome::class, 'Home'])->name('login');
     Route::get('/forgotpasswordadmin', [ControllerLogin::class, 'ForgotPasswordAdmin'])->middleware('throttle:10,2')->name('password.request');
     Route::post('/postforgotpasswordadmin', [ControllerLogin::class, 'PostForgotPasswordAdmin'])->middleware('throttle:5,2');
@@ -140,8 +140,8 @@ Route::middleware(['auth', 'ppicplant3', 'encryp', 'verified'])->group(function 
     Route::get('/logoutuserppicplant3', [ControllerLogin::class, 'LogoutPPICPlant3']);
     Route::get('/exportexceldatadetailloadingmachineplant3/{mesin:url_unique_mesin}', [ControllerPPICPlant3::class, 'ExportExcelDataDetailLoadingMachinePlant3']);
     Route::get('/exportexceldatakeseluruhanloadingmachineplant3', [ControllerPPICPlant3::class, 'ExportExcelDataKeseluruhanLoadingMachinePlant3']);
-    
-    
+
+
     // PLANT 1
 
     // 
@@ -158,9 +158,9 @@ Route::middleware(['auth', 'ppicplant3', 'encryp', 'verified'])->group(function 
     Route::get('/lihatdatakeseluruhanloadingmachineplant1/plant3', [ControllerPPICPlant3::class, 'LihatDataKeseluruhanLoadingMachinePlant1PLANT3']);
     Route::get('/exportpdfdatakeseluruhanloadingmachineplant1/plant3', [ControllerPPICPlant3::class, 'ExportPDFDataKeseluruhanLoadingMachinePlant1PLANT3']);
     Route::get('/exportexceldatakeseluruhanloadingmachineplant1/plant3', [ControllerPPICPlant3::class, 'ExportExcelDataKeseluruhanLoadingMachinePlant1PLANT3']);
-    
-    
-    
+
+
+
     // PLANT 2
 
     // 
@@ -177,8 +177,8 @@ Route::middleware(['auth', 'ppicplant3', 'encryp', 'verified'])->group(function 
     Route::get('/lihatdatakeseluruhanloadingmachineplant2/plant3', [ControllerPPICPlant3::class, 'LihatDataKeseluruhanLoadingMachinePlant2PLANT3']);
     Route::get('/exportpdfdatakeseluruhanloadingmachineplant2/plant3', [ControllerPPICPlant3::class, 'ExportPDFDataKeseluruhanLoadingMachinePlant2PLANT3']);
     Route::get('/exportexceldatakeseluruhanloadingmachineplant2/plant3', [ControllerPPICPlant3::class, 'ExportExcelDataKeseluruhanLoadingMachinePlant2PLANT3']);
-    
-    
+
+
     // LIHAT FILE PROJEK
 
     Route::post('/posttambahdatafileprojekloadingmachinekeseluruhanplant3/plant3/{data:url_unique}', [ControllerPPICPlant3::class, 'PostTambahDataFileProjekLoadingMachineKeseluruhanPlant3PLANT3'])->middleware('throttle:30,2');
@@ -191,48 +191,48 @@ Route::middleware(['auth', 'ppicplant3', 'encryp', 'verified'])->group(function 
     Route::post('/posttambahdatafileprojekloadingmesinpermesinplant3/plant3/{data:url_unique}', [ControllerPPICPlant3::class, 'PostTambahDataFileProjekLoadingMesinPerMesinPlant3PLNT3'])->middleware('throttle:30,2');
     Route::delete('/postdeletedatafileprojekloadingmachinepermachineplant3/plnt3/{file:url_unique}', [ControllerPPICPlant3::class, 'PostDeleteDataFileProjekLoadingMachinePerMachinePlant3PLNT3'])->middleware('throttle:30,2');
     Route::patch('/postubahdatafileprojekloadingmachinepermachineplant3/pl3/{file:url_unique}', [ControllerPPICPlant3::class, 'PostUbahDataFileProjekLoadingMachinePerMachinePlant3PLNT3'])->middleware('throttle:30,2');
-    
-    
+
+
     // EXPORT PDF DAN EXCEL START END DATE END DAN FILTER DONE NOT DONE lihatdatakeseluruhanloadingmachineplant3 plant3
 
     Route::get('/exportpdfstartdateenddatelihatdatakeseluruhanloadingmachineplant3/plant3', [ControllerPPICPlant3::class, 'ExportPDFStartDateEndDateLihatDataKeseluruhanLoadingMachinePlant3PLANT3']);
     Route::get('/exportexcelstartdateenddatelihatdatakeseluruhanloadingmachineplant3/plant3', [ControllerPPICPlant3::class, 'ExportExcelStartDateEndDateLihatDataKeseluruhanLoadingMachinePlant3PLANT3']);
     Route::get('/exportpdffilterdonenotdonelihatdatakeseluruhanloadingmachineplant3/plant3', [ControllerPPICPlant3::class, 'ExportPDFFilterDoneNotDoneLihatDataKeseluruhanLoadingMachinePlant3PLANT3']);
     Route::get('/exportexcelfilterdonenotdonelihatdatakeseluruhanloadingmachineplant3/plant3', [ControllerPPICPlant3::class, 'ExportExcelFilterDoneNotDoneLihatDataKeseluruhanLoadingMachinePlant3PLANT3']);
-    
-    
+
+
     // EXPORT PDF DAN EXCEL START END DATE END DAN FILTER DONE NOT DONE detaildataloadingmachineppicplant3 plant3
 
     Route::get('/exportpdfstartdateenddatedetaildataloadingmachineppicplant3/plant3/{mesin:url_unique_mesin}', [ControllerPPICPlant3::class, 'ExportPDFStartDateEndDateDetailDataLoadingMachinePPICPlant3PLANT3']);
     Route::get('/exportexcelstartdateenddatedetaildataloadingmachineppicplant3/plant3/{mesin:url_unique_mesin}', [ControllerPPICPlant3::class, 'ExportExcelStartDateEndDateDetailDataLoadingMachinePPICPlant3PLANT3']);
     Route::get('/exportpdffilterdonenotdonedetaildataloadingmachineppicplant3/plant3/{mesin:url_unique_mesin}', [ControllerPPICPlant3::class, 'ExportPDFFilterDoneNotDoneDetailDataLoadingMachinePPICPlant3PLANT3']);
     Route::get('/exportexcelfilterdonenotdonedetaildataloadingmachineppicplant3/plant3/{mesin:url_unique_mesin}', [ControllerPPICPlant3::class, 'ExportExcelFilterDoneNotDoneDetailDataLoadingMachinePPICPlant3PLANT3']);
-    
-    
+
+
     // EXPORT PDF DAN EXCEL START END DATE END DAN FILTER DONE NOT DONE lihatdatakeseluruhanloadingmachineplant1 plant3
 
     Route::get('/exportpdfstartdateenddatelihatdatakeseluruhanloadingmachineplant1/plant3', [ControllerPPICPlant3::class, 'ExportPDFStartDateEndDateLihatDataKeseluruhanLoadingMachinePlant1PLANT3']);
     Route::get('/exportexcelstartdateenddatelihatdatakeseluruhanloadingmachineplant1/plant3', [ControllerPPICPlant3::class, 'ExportExcelStartDateEndDateLihatDataKeseluruhanLoadingMachinePlant1PLANT3']);
     Route::get('/exportpdffilterdonenotdonelihatdatakeseluruhanloadingmachineplant1/plant3', [ControllerPPICPlant3::class, 'ExportPDFFilterDoneNotDoneLihatDataKeseluruhanLoadingMachinePlant1PLANT3']);
     Route::get('/exportexcelfilterdonenotdonelihatdatakeseluruhanloadingmachineplant1/plant3', [ControllerPPICPlant3::class, 'ExportExcelFilterDoneNotDoneLihatDataKeseluruhanLoadingMachinePlant1PLANT3']);
-    
-    
+
+
     // EXPORT PDF DAN EXCEL START END DATE END DAN FILTER DONE NOT DONE lihatdetaildataloadingmachinepermachineplant1 plant3
 
     Route::get('/exportpdfstartdateenddatelihatdetaildataloadingmachinepermachineplant1/plant3/{mesin:url_unique_mesin}', [ControllerPPICPlant3::class, 'ExportPDFStartDateEndDateLihatDetailDataLoadingMachinePerMachinePlant1PLANT3']);
     Route::get('/exportexcelstartdateenddatelihatdetaildataloadingmachinepermachineplant1/plant3/{mesin:url_unique_mesin}', [ControllerPPICPlant3::class, 'ExportExcelStartDateEndDateLihatDetailDataLoadingMachinePerMachinePlant1PLANT3']);
     Route::get('/exportpdffilterdonenotdonelihatdetaildataloadingmachinepermachineplant1/plant3/{mesin:url_unique_mesin}', [ControllerPPICPlant3::class, 'ExportPDFFilterDoneNotDoneLihatDetailDataLoadingMachinePerMachinePlant1PLANT3']);
     Route::get('/exportexcelfilterdonenotdonelihatdetaildataloadingmachinepermachineplant1/plant3/{mesin:url_unique_mesin}', [ControllerPPICPlant3::class, 'ExportExcelFilterDoneNotDoneLihatDetailDataLoadingMachinePerMachinePlant1PLANT3']);
-    
-    
+
+
     // EXPORT PDF DAN EXCEL START END DATE END DAN FILTER DONE NOT DONE lihatdatakeseluruhanloadingmachineplant2 plant3
 
     Route::get('/exportpdfstartdateenddatelihatdatakeseluruhanloadingmachineplant2/plant3', [ControllerPPICPlant3::class, 'ExportPDFStartDateEndDateLihatDataKeseluruhanLoadingMachinePlant2PLANT3']);
     Route::get('/exportexcelstartdateenddatelihatdatakeseluruhanloadingmachineplant2/plant3', [ControllerPPICPlant3::class, 'ExportExcelStartDateEndDateLihatDataKeseluruhanLoadingMachinePlant2PLANT3']);
     Route::get('/exportpdffilterdonenotdonelihatdatakeseluruhanloadingmachineplant2/plant3', [ControllerPPICPlant3::class, 'ExportPDFFilterDoneNotDoneLihatDataKeseluruhanLoadingMachinePlant2PLANT3']);
     Route::get('/exportexcelfilterdonenotdonelihatdatakeseluruhanloadingmachineplant2/plant3', [ControllerPPICPlant3::class, 'ExportExcelFilterDoneNotDoneLihatDataKeseluruhanLoadingMachinePlant2PLANT3']);
-    
-    
+
+
     // EXPORT PDF DAN EXCEL START END DATE END DAN FILTER DONE NOT DONE lihatdetaildataloadingmesinpermesinplant2 plant3
 
     Route::get('/exportpdfstartdateenddatelihatdetaildataloadingmesinpermesinplant2/plant3/{mesin:url_unique_mesin}', [ControllerPPICPlant3::class, 'ExportPDFStartDateEndDateLihatDetailDataLoadingMesinPerMesinPlant2PLANT3']);
@@ -278,7 +278,7 @@ Route::middleware(['auth', 'ppicplant1', 'encryp', 'verified'])->group(function 
     Route::get('/lihatdatakeseluruhanloadingmachineplant2/plant1', [ControllerPPICPlant1::class, 'LihatDataKeseluruhanLoadingMachinePlant2PLANT1']);
     Route::get('/export-pdf-data-keseluruhan-loading-machine-plant-2/plant1', [ControllerPPICPlant1::class, 'ExportPDFDataKeseluruhanLoadingMachinePlant2PLANT1']);
     Route::get('/export-excel-data-keseluruhan-loading-machine-plant-2/plant1', [ControllerPPICPlant1::class, 'ExportExcelDataKeseluruhanLoaadingMachinePlant2PLANT1']);
-    
+
     // PLANT 3
 
     Route::get('/pilihopsilihatdataloadingmachineplant3/plant1', [ControllerPPICPlant1::class, 'PilihOpsiLihatDataLoadingMachinePlant3PLANT1']);
@@ -287,13 +287,13 @@ Route::middleware(['auth', 'ppicplant1', 'encryp', 'verified'])->group(function 
     Route::get('/lihatdetaildataloadingmachineplant3/plant1/{mesin:url_unique_mesin}', [ControllerPPICPlant1::class, 'LihatDetailDataLoadingMachinePlant3PLANT1']);
     Route::get('/exportpdfdatadetailloadingmesinplant3permesin/plant1/{mesin:url_unique_mesin}', [ControllerPPICPlant1::class, 'ExportPDFDataDetailLoadingMesinPlant3PerMesinPLANT1']);
     Route::get('/exportexceldatadetailloadingmesinplant3permesin/plant1/{mesin:url_unique_mesin}', [ControllerPPICPlant1::class, 'ExportExcelDataDetailLoadingMesinPlant3PerMesinPLANT1']);
-    
+
     Route::get('/lihatdatakeseluruhanloadingmesinplant3/plant1', [ControllerPPICPlant1::class, 'LihatDataKeseluruhanLoadingMachinePlant3PLANT1']);
     Route::get('/export-pdf-data-keseluruhan-loading-mesin-plant-3/plant1', [ControllerPPICPlant1::class, 'ExportPDFDataKeseluruhanLoadingMachinePlant3PLANT1']);
     Route::get('/export-excel-data-keseluruhan-loading-machine-plant-3/plant1', [ControllerPPICPlant1::class, 'ExportExcelDataKeseluruhanLoadingMachinePlant3PLANT1']);
-    
-    
-    
+
+
+
     // FILE PROJEK
 
     Route::get('/lihatfileprojekloadingmachineplant1/plant1/{data:url_unique}', [ControllerPPICPlant1::class, 'LihatFileProjekLoadingMachinePlant1PLANT1']);
@@ -306,46 +306,46 @@ Route::middleware(['auth', 'ppicplant1', 'encryp', 'verified'])->group(function 
     Route::delete('/postdeletefileprojekloadingmachinepermachineplant1/PLNT1/{file:url_unique}', [ControllerPPICPlant1::class, 'PostDeleteFileProjekLoadingMachinePerMachinePlant1PLNT1'])->middleware('throttle:30,2');
     Route::patch('/postubahdatafileprojekloadingmachinepermachineplant1/PLNT1/{file:url_unique}', [ControllerPPICPlant1::class, 'PostUbahDataFileProjekLoadingMachinePerMachinePlant1PLNT1'])->middleware('throttle:30,2');
     Route::post('/posttambahdatafileprojekloadingmachineallplant1/plnt1/{data:url_unique}', [ControllerPPICPlant1::class, 'PostTambahDataFileProjekLoadingMachineAllPlant1PLANT1'])->middleware('throttle:30,2');
-    
+
     // EXPORT PDF DAN EXCEL START END DATE END DAN FILTER DONE NOT DONE
 
     Route::get('/exportpdfstartdateenddatedatadetailloadingmachineplant1/{mesin:url_unique_mesin}', [ControllerPPICPlant1::class, 'ExportPDFStartDateEndDateDataDetailLoadingMachinePlant1PLNT1']);
     Route::get('/exportexcelstartdateenddatedatadetailloadingmachineplant1/{mesin:url_unique_mesin}', [ControllerPPICPlant1::class, 'ExportExcelStartDateEndDateDataDetailLoadingMachinePlant1PLNT1']);
     Route::get('/exportpdffilterdonenotdonedatadetailloadingmachineplant1/{mesin:url_unique_mesin}', [ControllerPPICPlant1::class, 'ExportPDFFilterDoneNotDoneDataDetailLoadingMachinePlant1PLNT1']);
     Route::get('/exportexcelfilterdonenotdonedatadetailloadingmachineplant1/{mesin:url_unique_mesin}', [ControllerPPICPlant1::class, 'ExportExcelFilterDoneNotDoneDataDetailLoadingMachinePlant1PLNT1']);
-    
+
     // EXPORT PDF DAN EXCEL START END DATE END DAN FILTER DONE NOT DONE KESELURUHAN
 
     Route::get('/exportpdfstartdateenddatelihatdataallloadingmachineplant1/plnt1', [ControllerPPICPlant1::class, 'ExportPDFStartDateEndDateLihatDataAllLoadingMachinePlant1PLNT1']);
     Route::get('/exportexcelstartdateenddatelihatdataallloadingmachineplant1/plnt1', [ControllerPPICPlant1::class, 'ExportExcelStartDateEndDateLihatDataAllLoadingMachinePlant1PLNT1']);
     Route::get('/exportpdffilterdonenotdonelihatdataallloadingmachineplant1/plnt1', [ControllerPPICPlant1::class, 'ExportPDFFilterDoneNotDoneLihatDataAllLoadingMachinePlant1PLNT1']);
     Route::get('/exportexcelfilterdonenotdonelihatdataallloadingmachineplant1/pln1', [ControllerPPICPlant1::class, 'ExportExcelFilterDoneNotDoneLihatDataAllLoadingMachinePlant1PLN1']);
-    
-    
+
+
     // EXPORT PDF DAN EXCEL START END DATE END DAN FILTER DONE NOT DONE DATA DETAIL LOADING MACHINE PLANT2 PER MACHINE PLNT1
 
     Route::get('/exportpdfstartdateenddatelihatdetaildataloadingmachineplant2permachine/PLNT1/{mesin:url_unique_mesin}', [ControllerPPICPlant1::class, 'ExportPDFStartDateEndDateLihatDetailDataLoadingMachinePlant2PerMachinePLNT1']);
     Route::get('/exportexcelstartdateenddatelihatdetaildataloadingmachineplant2permachine/PLNT1/{mesin:url_unique_mesin}', [ControllerPPICPlant1::class, 'ExportExcelStartDateEndDateLihatDetailDataLoadingMachinePlant2PerMachinePLNT1']);
     Route::get('/exportpdffilterdonenotdonelihatdetaildataloadingmachineplant2permachine/PLNT1/{mesin:url_unique_mesin}', [ControllerPPICPlant1::class, 'ExportPDFFilterDoneNotDoneLihatDetailDataLoadingMachinePlant2pPerMachinePLNT1']);
     Route::get('/exportexcelfilterdonenotdonelihatdetaildataloadingmachineplant2permachine/PLNT1/{mesin:url_unique_mesin}', [ControllerPPICPlant1::class, 'ExportExcelFilterDoneNotDoneLihatDetailDataLoadingMachinePlant2PerMachinePLNT1']);
-    
-    
+
+
     // EXPORT PDF DAN EXCEL START END DATE END DAN FILTER DONE NOT DONE LIHAT DATA KESELURUHAN LOADING MACHINE PLANT2 PLANT1
 
     Route::get('/exportpdfstartdateenddatelihatdatakeseluruhanloadingmachineplant2PLANT1', [ControllerPPICPlant1::class, 'ExportPDFStartDateEndDateLihatDataKeseluruhanLoadingMachinePlant2PLANT1']);
     Route::get('/exportexcelstartdateenddatelihatdatakeseluruhanloadingmachineplant2PLANT1', [ControllerPPICPlant1::class, 'ExportExcelStartDateEndDateLihatDataKeseluruhanLoadingMachinePlant2PLANT1']);
     Route::get('/exportpdffilterdonenotdonelihatdatakeseluruhanloadingmachineplant2/PLNT1', [ControllerPPICPlant1::class, 'ExportPDFFilterDoneNotDoneLihatDataKeseluruhanLoadingMachinePlant2PLNT1']);
     Route::get('/exportexcelfilterdonenotdonelihatdatakeseluruhanloadingmachineplant2/PLNT1', [ControllerPPICPlant1::class, 'ExportExcelFilterDoneNotDoneLihatDataKeseluruhanLoadingMachinePlant2PLNT1']);
-    
-    
+
+
     // EXPORT PDF DAN EXCEL START END DATE END DAN FILTER DONE NOT DONE LIHAT DATA KESELURUHAN LOADING MACHINE PLANT3 PLANT1
 
     Route::get('/exportpdfstartdateenddatelihatdatakeseluruhanloadingmachineplant3PLANT1', [ControllerPPICPlant1::class, 'ExportPDFStartDateEndDateLihatDataKeseluruhanLoadingMachinePlant3PLANT1']);
     Route::get('/exportexcelstartdateenddatelihatdatakeseluruhanloadingmachineplant3PLANT1', [ControllerPPICPlant1::class, 'ExportExcelStartDateEndDateLihatDataKeseluruhanLoadingMachinePlant3PLANT1']);
     Route::get('/exportpdffilterdonenotdonelihatdatakeseluruhanloadingmachineplant3/PLANT1', [ControllerPPICPlant1::class, 'ExportPDFFilterDoneNotDoneLihatDataKeseluruhanLoadingMachinePlant3PLANT1']);
     Route::get('/exportexcelfilterdonenotdonelihatdatakeseluruhanloadingmachineplant3/PLANT1', [ControllerPPICPlant1::class, 'ExportExcelFilterDoneNotDoneLihatDataKeseluruhanLoadingMachinePlant3PLANT1']);
-    
-    
+
+
     // EXPORT PDF DAN EXCEL START END DATE END DAN FILTER DONE NOT DONE LIHAT DETAIL DATA LOADING MACHINE PLANT 3 PLANT1
 
     Route::get('/exportpdfstartdateenddatelihatdetaildataloadingmachineplant3/plant1/{mesin:url_unique_mesin}', [ControllerPPICPlant1::class, 'ExportPDFStartDateEndDateLihatDetailDataLoadingMachinePlant3PLANT1']);
@@ -382,8 +382,8 @@ Route::middleware(['auth', 'ppicplant2', 'encryp', 'verified'])->group(function 
     Route::get('/logoutuserppicplant2', [ControllerLogin::class, 'LogoutPPICPlant2']);
     Route::get('/export-excel-detail-loading-machine-plant-2/{mesin:url_unique_mesin}', [ControllerPPICPlant2::class, 'ExportExcelDetailLoadingMachinePlant2']);
     Route::get('/export-excel-data-keseluruhan-loading-machine-plant-2', [ControllerPPICPlant2::class, 'ExportExcelDataKeseluruhanLoadingMachinePlant2']);
-    
-    
+
+
     // PLANT 1
 
     Route::get('/pilihopsilihatdataloadingmachineplant1/plnt2', [ControllerPPICPlant2::class, 'PilihOpsiLihatDataLoadingMachinePlant1PLNT2']);
@@ -392,14 +392,14 @@ Route::middleware(['auth', 'ppicplant2', 'encryp', 'verified'])->group(function 
     Route::get('/lihatsemuadatadetailloadingmesinpermesinplant1/plant2/{mesin:url_unique_mesin}', [ControllerPPICPlant2::class, 'LihatSemuaDataDetailLoadingMesinPermesinPlant1PLANT2']);
     Route::get('/export-pdf-detail-loading-machine-plant-1-per-machine/plant2/{mesin:url_unique_mesin}', [ControllerPPICPlant2::class, 'ExportPDFDetailLoadingMachinePlant1PerMachinePLANT2']);
     Route::get('/export-excel-detail-loading-machine-plant-1-per-machine/plant2/{mesin:url_unique_mesin}', [ControllerPPICPlant2::class, 'ExportExcelDetailLoadingMachinePlant1PerMachinePLANT2']);
-    
+
     // 
-    
+
     Route::get('/lihatdatakeseluruhanloadingmachineplant1/plant2', [ControllerPPICPlant2::class, 'LihatDataKeseluruhanLoadingMachinePlant1PLANT2']);
     Route::get('/export-pdf-data-keseluruhan-loading-machine-plant-1/plant2', [ControllerPPICPlant2::class, 'ExportPDFDataKeseluruhanLoadingMachinePlant1PLANT2']);
     Route::get('/export-excel-data-keseluruhan-loading-machine-plant-1/plant2', [ControllerPPICPlant2::class, 'ExportExcelDataKeseluruhanLoadingMachinePlant1PLANT2']);
-    
-    
+
+
     // PLANT 3
 
     // 
@@ -410,14 +410,14 @@ Route::middleware(['auth', 'ppicplant2', 'encryp', 'verified'])->group(function 
     Route::get('/lihatsemuadatadetailloadingmachinepermachineplant3/plant2/{mesin:url_unique_mesin}', [ControllerPPICPlant2::class, 'LihatSemuaDataDetailLoadingMachinePerMachinePlant3PLANT2']);
     Route::get('/export-pdf-detail-loading-machine-plant-3-per-machine/plant2/{mesin:url_unique_mesin}', [ControllerPPICPlant2::class, 'ExportPDFDetailLoadingMachinePlant3PerMachinePLANT2']);
     Route::get('/export-excel-detail-loading-machine-plant-3-per-machine/plant2/{mesin:url_unique_mesin}', [ControllerPPICPlant2::class, 'ExportExcelDetailLoadingMachinePlant3PerMachinePLANT2']);
-    
+
     // 
 
     Route::get('/lihatdatakeseluruhanloadingmesinplant3/plant2', [ControllerPPICPlant2::class, 'LihatDataKeseluruhanLoadingMesinPlant3PLANT2']);
     Route::get('/export-pdf-data-keseluruhan-loading-machine-plant-3/plant2', [ControllerPPICPlant2::class, 'ExportPDFDataKeseluruhanLoadingMachinePlant3PLANT2']);
     Route::get('/export-excel-data-keseluruhan-loading-machine-plant-3/plant2', [ControllerPPICPlant2::class, 'ExportExcelDataKeseluruhanLoadingMachinePlant3PLANT2']);
-    
-    
+
+
     // FILE PROJEK
 
     Route::post('/posttambahdatafileprojekloadingmachinekeseluruhanplant2/plnt2/{data:url_unique}', [ControllerPPICPlant2::class, 'PostTambahDataFileProjekLoadingMachineKeseluruhanPlant2PLNT2'])->middleware('throttle:30,2');
@@ -430,42 +430,42 @@ Route::middleware(['auth', 'ppicplant2', 'encryp', 'verified'])->group(function 
     Route::post('/posttambahdatafileprojekloadingmesinpermesinplant2/plant2/{data:url_unique}', [ControllerPPICPlant2::class, 'PostTambahDataFileProjekLoadingMesinPerMesinPlant2PLANT2'])->middleware('throttle:30,2');
     Route::delete('/postdeletedatafileprojekloadingmachinepermachineplant2/plnt2/{file:url_unique}', [ControllerPPICPlant2::class, 'PostDeleteDataFileProjekLoadingMachinePerMachinePlant2PLNT2'])->middleware('throttle:30,2');
     Route::patch('/postubahdatafileprojekloadingmachinepermachineplant2/plnt2/{file:url_unique}', [ControllerPPICPlant2::class, 'PostUbahDataFileProjekLoadingMachinePerMachinePlant2PLNT2'])->middleware('throttle:30,2');
-    
-    
-    
+
+
+
     // EXPORT PDF DAN EXCEL START END DATE END DAN FILTER DONE NOT DONE LIHAT DATA KESELURUHAN LOADING MACHINE PLANT 2 PLNT2
 
     Route::get('/exportpdfstartdateenddatelihatdatakeseluruhanloadingmachineplant2/plnt2', [ControllerPPICPlant2::class, 'ExportPDFStartDateEndDateLihatDataKeseluruhanLoadingMachinePlant2PLNT2']);
     Route::get('/exportexcelstartdateenddatelihatdatakeseluruhanloadingmachineplant2/plnt2', [ControllerPPICPlant2::class, 'ExportExcelStartDateEndDateLihatDataKeseluruhanLoadingMachinePlant2PLNT2']);
     Route::get('/exportpdffilterdonenotdonelihatdatakeseluruhanloadingmachineplant2/plnt2', [ControllerPPICPlant2::class, 'ExportPDFFilterDoneNotDoneLihatDataKeseluruhanLoadingMachinePlant2PLNT2']);
     Route::get('/exportexcelfilterdonenotdonelihatdatakeseluruhanloadingmachineplant2/plnt2', [ControllerPPICPlant2::class, 'ExportExcelFilterDoneNotDoneLihatDataKeseluruhanLoadingMachinePlant2PLNT2']);
-    
-    
+
+
     // EXPORT PDF DAN EXCEL START END DATE END DAN FILTER DONE NOT DONE LIHAT SEMUA DATA DETAIL LOADING MACHINE PLANT2 PLN 2
 
     Route::get('/exportpdfstartdateenddatelihatsemuadatadetailloadingmachineplant2/plnt2/{mesin:url_unique_mesin}', [ControllerPPICPlant2::class, 'ExportPDFStartDatEndDateLihatSemuaDataDetailLoadingMachinePlant2PLNT2']);
     Route::get('/exportexcelstartdateenddatelihatsemuadatadetailloadingmachineplant2/plnt2/{mesin:url_unique_mesin}', [ControllerPPICPlant2::class, 'ExportExcelStartDateEndDateLihatSemuaDataDetailLoadingMachinePlant2PLNT2']);
     Route::get('/exportpdffilterdonenotdonelihatsemuadatadetailloadingmachineplant2PLN2/plnt2/{mesin:url_unique_mesin}', [ControllerPPICPlant2::class, 'ExportPDFFilterDoneNotDoneLihatSemuaDataDetailLoadingMachinePlant2PLN2']);
     Route::get('/exportexcelfilterdonenotdonelihatsemuadatadetailloadingmachineplant2PLN2/plnt2/{mesin:url_unique_mesin}', [ControllerPPICPlant2::class, 'ExportExcelFilterDoneNotDoneLihatSemuaDataDetailLoadingMachinePlant2PLN2']);
-    
-    
-    
+
+
+
     // EXPORT PDF DAN EXCEL START END DATE END DAN FILTER DONE NOT DONE LIHAT DATA KESELURUHAN LOADING MACHINE PLANT1 PLANT2 
 
     Route::get('/exportpdfstartdateenddatelihatdatakeseluruhanloadingmachineplant1/plnt2', [ControllerPPICPlant2::class, 'ExportPDFStartDateEndDateLihatDataKeseluruhanLoadingMachinePlant1PLANT2']);
     Route::get('/exportexcelstartdateenddatelihatdatakeseluruhanloadingmachineplant1/plnt2', [ControllerPPICPlant2::class, 'ExportExcelStartDateEndDateLihatDataKeseluruhanLoadingMachinePlant1PLANT2']);
     Route::get('/exportpdffilterdonenotdonelihatdatakeseluruhanloadingmachineplant1/PLANT2', [ControllerPPICPlant2::class, 'ExportPDFFilterDoneNotDoneLihatDataKeseluruhanLoadingMachinePlant1PLANT2']);
     Route::get('/exportexcelfilterdonenotdonelihatdatakeseluruhanloadingmachineplant1/PLANT2', [ControllerPPICPlant2::class, 'ExportExcelFilterDoneNotDoneLihatDataKeseluruhanLoadingMachinePlant1PLANT2']);
-    
-    
+
+
     // EXPORT PDF DAN EXCEL START END DATE END DAN FILTER DONE NOT DONE lihatsemuadatadetailloadingmesinpermesinplant1 plant 2
 
     Route::get('/exportpdfstartdateenddatelihatsemuadatadetailloadingmesinpermesinplant1/plant2/{mesin:url_unique_mesin}', [ControllerPPICPlant2::class, 'ExportPDFStartDateEndDateLihatSemuaDataDetailLoadingMesinPerMesinPlant1PLANT2']);
     Route::get('/exportexcelstartdateenddatelihatsemuadatadetailloadingmesinpermesinplant1/plant2/{mesin:url_unique_mesin}', [ControllerPPICPlant2::class, 'ExportExcelStartDateEndDateLihatSemuaDataDetailLoadingMesinPerMesinPlant1PLANT2']);
     Route::get('/exportpdffilterdonenotdonelihatsemuadatadetailloadingmesinpermesinplant1/plant2/{mesin:url_unique_mesin}', [ControllerPPICPlant2::class, 'ExportPDFFilterDoneNotDoneLihatSemuaDataDetailLoadingMesinPerMesinPlant1PLANT2']);
     Route::get('/exportexcelfilterdonenotdonelihatsemuadatadetailloadingmesinpermesinplant1/plant2/{mesin:url_unique_mesin}', [ControllerPPICPlant2::class, 'ExportExcelFilterDoneNotDoneLihatSemuaDataDetailLoadingMesinPerMesinPlant1PLANT2']);
-    
-    
+
+
     // EXPORT PDF DAN EXCEL START END DATE END DAN FILTER DONE NOT DONE lihatdatakeseluruhanloadingmesinplant3 plant2
 
 
@@ -473,8 +473,8 @@ Route::middleware(['auth', 'ppicplant2', 'encryp', 'verified'])->group(function 
     Route::get('/exportexcelstartdateenddatelihatdatakeseluruhanloadingmachineplant3/plant2', [ControllerPPICPlant2::class, 'ExportExcelStartDateEndDatelLihatDataKeseluruhanLoadingMachinePlant3PLANT2']);
     Route::get('/exportpdffilterdonenotdonelihatdatakeseluruhanloadingmachineplant3/plant2', [ControllerPPICPlant2::class, 'ExportPDFFilterDoneNotDoneLihatDataKeseluruhanLoadingMachinePlant3PLANT2']);
     Route::get('/exportexcelfilterdonenotdonelihatdatakeseluruhanloadingmachineplant3/plant2', [ControllerPPICPlant2::class, 'ExportExcelFilterDoneNotDoneLihatDataKeseluruhanLoadingMachinePlant3PLANT2']);
-    
-    
+
+
     // EXPORT PDF DAN EXCEL START END DATE END DAN FILTER DONE NOT DONE lihatsemuadatadetailloadingmachinepermachineplant3 plant2
 
     Route::get('/exportpdfstartdateenddatelihatsemuadatadetailloadingmachinepermachineplant3/plant2/{mesin:url_unique_mesin}', [ControllerPPICPlant2::class, 'ExportPDFStartDateEndDateLihatSemuaDataDetailLoadingMachinePerMachinePlant3PLANT2']);
