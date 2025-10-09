@@ -67,7 +67,7 @@
         <!-- --------------- HEADER --------------- -->
         <nav id="header">
             <div class="nav-logo">
-                <p class="nav-name"><img src="{{ asset('storage/logo/logo_pt.png') }}" alt="" height="70px;">
+                <p class="nav-name"><img src="{{ asset('logo/logo_pt.png') }}" alt="" height="70px;">
                 </p>
                 <span>.</span>
             </div>
@@ -125,7 +125,7 @@
             <section class="featured-box" id="home">
                 <div id="preloader">
                     <div class="preloader-animation">
-                        <img src="{{ asset('storage/image/logo_cat_terbaru.png') }}" alt="Preloader Image">
+                        <img src="{{ asset('image/logo_cat_terbaru.png') }}" alt="Preloader Image">
                     </div>
                 </div>
                 <div class="featured-text">
