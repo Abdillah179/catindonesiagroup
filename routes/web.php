@@ -72,7 +72,7 @@ Route::middleware(['guests'])->group(function () {
 });
 
 
-Route::middleware(['auth', 'adminplant3', 'encryp', 'verified'])->group(function () {
+Route::middleware(['auth', 'adminplant3', 'verified'])->group(function () {
     Route::get('/DashboardAdmin', [ControllerAdmin::class, 'DashboardAdmin'])->name('home');
     Route::get('/datauseradmin', [ControllerAdmin::class, 'DataUserAdmin']);
     Route::get('/datamesin', [ControllerAdmin::class, 'DataMesin']);
