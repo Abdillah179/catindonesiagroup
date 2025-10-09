@@ -37,11 +37,11 @@ return [
         ],
 
         'public' => [
-            'driver' => env('FILESYSTEM_PUBLIC_DRIVER', 'local'),
-            'root' => storage_path('app/public'),
-            'url' => env('APP_URL') . '/storage',
-            'visibility' => 'public',
-            'throw' => false,
+            // 'driver' => env('FILESYSTEM_PUBLIC_DRIVER', 'local'),
+            // 'root' => storage_path('app/public'),
+            // 'url' => env('APP_URL') . '/storage',
+            // 'visibility' => 'public',
+            // 'throw' => false,
 
             // Cloudinary config (dipakai kalau FILESYSTEM_PUBLIC_DRIVER=cloudinary)
             'cloud_name' => env('CLOUDINARY_CLOUD_NAME'),
