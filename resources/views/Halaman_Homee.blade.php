@@ -208,92 +208,91 @@
                     <div class="product-section">
                         <h2 style="text-align: center;margin-bottom: 10px;" class="product-section-1"></h2>
                         <div class="web-page page-1" style="margin-top: 10px;">
-                            <img src="{{ asset('gambar-klien-cat/PT-Honda-Prospect-Motor.jpg') }}"
-                                alt="Bakery Website">
+                            <img src="{{ asset('gambar-klien/PT-Honda-Prospect-Motor.jpg') }}" alt="Bakery Website">
                         </div>
                     </div>
                     <div class="product-section">
                         <h2 style="text-align: center;margin-bottom: 10px;" class="product-section-3"></h2>
                         <div class="web-page" style="margin-top: 10px;">
-                            <img src="{{ asset('gambar-klien-cat/asfd.png') }}" height="200px">
+                            <img src="{{ asset('gambar-klien/asfd.png') }}" height="200px">
                         </div>
                     </div>
                     <div class="product-section">
                         <h2 style="text-align: center;margin-bottom: 10px;" class="product-section-3"></h2>
                         <div class="web-page" style="margin-top: 10px;">
-                            <img src="{{ asset('gambar-klien-cat/fcc.png') }}" height="200px">
+                            <img src="{{ asset('gambar-klien/fcc.png') }}" height="200px">
                         </div>
                     </div>
                     <div class="product-section">
                         <h2 style="text-align: center;margin-bottom: 10px;" class="product-section-3"></h2>
                         <div class="web-page" style="margin-top: 10px;">
-                            <img src="{{ asset('gambar-klien-cat/hge.jpg') }}" height="100px">
+                            <img src="{{ asset('gambar-klien/hge.jpg') }}" height="100px">
                         </div>
                     </div>
                     <div class="product-section">
                         <h2 style="text-align: center;margin-bottom: 10px;" class="product-section-3"></h2>
                         <div class="web-page" style="margin-top: 10px;">
-                            <img src="{{ asset('gambar-klien-cat/ijpn.png') }}">
+                            <img src="{{ asset('gambar-klien/ijpn.png') }}">
                         </div>
                     </div>
                     <div class="product-section">
                         <h2 style="text-align: center;margin-bottom: 10px;" class="product-section-3"></h2>
                         <div class="web-page" style="margin-top: 10px;">
-                            <img src="{{ asset('gambar-klien-cat/inoac.jpeg') }}">
+                            <img src="{{ asset('gambar-klien/inoac.jpeg') }}">
                         </div>
                     </div>
                     <div class="product-section">
                         <h2 style="text-align: center;margin-bottom: 10px;" class="product-section-3"></h2>
                         <div class="web-page" style="margin-top: 10px;">
-                            <img src="{{ asset('gambar-klien-cat/Logo-ART.png') }}">
+                            <img src="{{ asset('gambar-klien/Logo-ART.png') }}">
                         </div>
                     </div>
                     <div class="product-section">
                         <h2 style="text-align: center;margin-bottom: 10px;" class="product-section-3"></h2>
                         <div class="web-page" style="margin-top: 10px;">
-                            <img src="{{ asset('gambar-klien-cat/miyuki.png') }}">
+                            <img src="{{ asset('gambar-klien/miyuki.png') }}">
                         </div>
                     </div>
                     <div class="product-section">
                         <h2 style="text-align: center;margin-bottom: 10px;" class="product-section-3"></h2>
                         <div class="web-page" style="margin-top: 10px;">
-                            <img src="{{ asset('gambar-klien-cat/royal-industri-indonesia.png') }}">
+                            <img src="{{ asset('gambar-klien/royal-industri-indonesia.png') }}">
                         </div>
                     </div>
                     <div class="product-section">
                         <h2 style="text-align: center;margin-bottom: 10px;" class="product-section-3"></h2>
                         <div class="web-page" style="margin-top: 10px;">
-                            <img src="{{ asset('gambar-klien-cat/santos.jpg') }}">
+                            <img src="{{ asset('gambar-klien/santos.jpg') }}">
                         </div>
                     </div>
                     <div class="product-section">
                         <h2 style="text-align: center;margin-bottom: 10px;" class="product-section-3"></h2>
                         <div class="web-page" style="margin-top: 10px;">
-                            <img src="{{ asset('gambar-klien-cat/suncirin.jpeg') }}">
+                            <img src="{{ asset('gambar-klien/suncirin.jpeg') }}">
                         </div>
                     </div>
                     <div class="product-section">
                         <h2 style="text-align: center;margin-bottom: 10px;" class="product-section-3"></h2>
                         <div class="web-page" style="margin-top: 10px;">
-                            <img src="{{ asset('gambar-klien-cat/supravisi.jpg') }}">
+                            <img src="{{ asset('gambar-klien/supravisi.jpg') }}">
                         </div>
                     </div>
                     <div class="product-section">
                         <h2 style="text-align: center;margin-bottom: 10px;" class="product-section-3"></h2>
                         <div class="web-page" style="margin-top: 10px;">
-                            <img src="{{ asset('gambar-klien-cat/trix.png') }}">
+                            <img src="{{ asset('gambar-klien/trix.png') }}">
                         </div>
                     </div>
                     <div class="product-section">
                         <h2 style="text-align: center;margin-bottom: 10px;" class="product-section-3"></h2>
                         <div class="web-page" style="margin-top: 10px;">
-                            <img src="{{ asset('gambar-klien-cat/tsuzuki.png') }}">
+                            <img src="{{ asset('gambar-klien/tsuzuki.png') }}">
                         </div>
                     </div>
                     <div class="product-section">
                         <h2 style="text-align: center;margin-bottom: 10px;" class="product-section-3"></h2>
                         <div class="web-page" style="margin-top: 10px;">
-                            <img src="{{ asset('gambar-klien-cat/varley.png') }}">
+                            <img src="{{ asset('gambar-klien/varley.png') }}">
                         </div>
                     </div>
                 </div>
