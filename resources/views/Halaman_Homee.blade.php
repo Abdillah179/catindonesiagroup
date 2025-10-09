@@ -10,7 +10,7 @@
 
     <title>Cemerlang Abadi Tekindo (CAT)</title>
 
-    <link rel="icon" href="{{ image_url('storage/image/logo_cat_terbaru.png') }}" type="image/x-icon">
+    <link rel="icon" href="{{ asset('image/logo_cat_terbaru.png') }}" type="image/x-icon">
 
     <link rel="stylesheet" href="{{ asset('css/style2.css') }}" id="themeStylesheet">
 
